@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+{% block title %}Bienvenido a Onlyflans{% endblock %}
+
+{% block content %}
+<!-- Contenido de la página -->
+<div class="container">
+    <div class="row py-4">
+        {% for flan in flanes %}
+        <div class="col-12 col-md-3 g-3">
+            <div class="card">
+                <img src="{{ flan.image_url }}" class="card-img-top" alt="{{ flan.name }}">
+                <div class="card-body">
+                    <h5 class="card-title">{{ flan.name }}</h5>
+                    <p class="card-text">{{ flan.description }}</p>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+
+{% endblock %}
